@@ -254,7 +254,90 @@ Context의 확장 가능성. DB, Metric, Lob, Jira, Slack에 접근하도록 하
 
 ## 바이브하게 Claude Code 마스터하기
 
-- **황민호** 카카오 AI 네이티브전략 리더
+- **황민호** 카카오 AI네이티브 전략 리더
+- https://youtu.be/t8XaWGJAUaI?si=syg24aGdsUnXNt3D
+- https://hellovibe.io/
+
+현재 Claude Code 쓰는 분?
+책이 작성 중. 한빛미디어에서 책이 나올거라서, 이번 발표는 시간관계상 동기부여에 초점.
+
+### Trending AI Coding Tools
+
+- Claude Code, OpenAI Codex CLI, Gemini CLI
+
+한국의 trend는 어떨까? 최근에 Codex CLI가 잠깐 오르고 있는 모양새.
+Claude Code 사용자 - 8월 중순부터 성능저하의 체감. 품질 저하 논란, 원인 등
+
+- 2025.09.17 [A postmortem of three recent issues](https://www.anthropic.com/engineering/a-postmortem-of-three-recent-issues)
+- https://news.ycombinator.com/item?id=44713757
+
+Heavy 사용자들 8월 중순에 주간 사용량 제한이 도입됨.
+Claude Code 불만이 발생한 상황에서 다른 CLI 도구의 홍보. Gemini의 경우 IDE 연동을 많이 하는 중.
+
+크게 3가지 레이어
+- Vibe Coding 서비스
+- AI Coding 도구 (GitHub Copilot)
+- CLI 기반 Agent
+
+코드 밖의 영역에서는 Presentation 관련이 많이 회자되는 것 같다. Skywork, GenSpark 등.
+
+2023 GitHub Copilot -> 2024 Cursor IDE -> 2025 Claude Code(+ MAX 요금제) -> ?
+
+기업들은 열심히 도입 중(Google의 25% 공식 발표). 카카오는 현재 AI 마일리지 시험중.
+3달간 진행했을 때, Cursor -> Claude Code 변화.
+내부 설문조사 결과, 평균 70% 정도. Heavy 사용자는 99%로 응답하기도.
+
+AI가 변화시키고 있는 개발환경. 우리는 이제 다른 일을 한다.
+- 누구나 개발을 할 수 있다? 잠재적 개발자의 수가 엄청 많다. (코딩에 관심을 가지는 비개발자 직군이 직접 도구를 개발해서 업무에 활용)
+- 중급 개발자 AI의 등장? 이미 중급이 등장한 것 같다.
+
+AI와 병렬적으로 일을 하는 것을 시연할 예정.
+
+### AI Native 개발환경
+
+비어있는 폴더에서 Claude 호출. 기본 Tool 14개. MCP 설정 없이 진행.
+
+[한빛미디어 사이트](https://www.hanbit.co.kr/media/)에서 신간목록을 가져와서 마크다운 파일 저장. (권한 요청)
+
+기존 부분과 무엇이 다를까? 1 prompt로 세부 task들을 계획에서, todo list의 depth를 깊이 설정해서 업무를 수행.
+- Reference 제공함
+
+6월에는 업무에 활용해볼 목표로 JIRA 이슈 기반 작업을 수행.(JIRA MCP)
+
+- Issue 번호로 확인. 실제 개발 업무 수행
+- 권한 부여 후 commit/push 수행
+
+Commit이 추가되면, GitHub Action에서 Secret key를 사용해서 Claude Code를 수행.
+보안 문제를 위해 PR을 직접 만들지는 않음
+PR이 생성된 후에는 Review action 수행.
+
+사내 해커톤으로 AI 심사 시스템 제작
+
+- D-30 Gemini로 기획서 제작
+    - v0로 화면 기획
+- D-1x 심사 시스템 개발 시작: API 명세서, 요구사항 작성 -> 백엔드 구축 -> 하이브리드로 LLM 연결
+    - 개발자는 서버쪽 쿠버네티스, API 환경설정 등을 수행.
+    - Proxy 설정 등 내부 환경에서 필요한 설정들을 직접 troubleshoot
+- D-4 어느정도 개발이 진행된 후, 운영을 어떻게 할 것인가 (Admin 기능의 필요성)
+    - 팀 관리, 제출물 관리 등.
+- 행사 당일 변수들
+    - 광고영상이 90점을 받는 상황 발생. 행사에 대한 세부 지침을 추가해서 재심사.
+    - 동료 평가 시스템(ELO 레이팅)
+
+GitHub history를 기반으로 개발시간 추정 -> 몇차례 조정 후 48시간 개발
+
+### Claude Code 일상 활용 사례
+
+책: 생성물이 아무리 빨리 나와도, 환각 문제가 있으므로 교정이 필요함. GitHub에 star 많이 달리더라...
+
+"나만의 AI 유튜브 번역기"를 파이썬으로 만들기. YouTube 링크를 넣으면 자막추출 등 수행
+
+오프라인 행사에서 AI 활용: 행가 기획(Gemini), 사이트 제작(Claude Code)과 운영. 홍보영상과 포스터(Gemini, Veo3)등
+공지사항 등(GPT-4, Claude Code)
+
+### 질문이 바뀌는 시대
+
+9월. 바이브 코딩 세미나 참가. 초보인 척 참가. VR 도전.
 
 ## 경영진과 직장인이 AI 도입을 바라보는 시각은 무엇이 다를까
 
