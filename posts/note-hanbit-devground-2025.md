@@ -448,7 +448,94 @@ Vibe Coding을 한다? 더 진한 엔지니어링의 시대
 
 ## 한눈에 알아보는 LLM post-training
 
-- **조재경** SK텔레콤 AI LLM Research
+- **조재경** SK텔레콤 AI Model Lab
+
+홍보: A.X 에이닷엑스. HuggingFace에 모델 공개되어 있음.
+
+확장되는 LLM 생태계(Vertical LLM)
+
+- 2023 LLM Researcher = LLM을 사용하는 사람들 
+- 2024 LLM Researcher = API 활용해 서비스를 만드는 사람
+- 2025 LLM Researcher = LLM을 만드는 사람들
+- 2026 에는 또 달라지지 않을까
+
+직접 만드는 사람들이 늘어날 것으로 예상하고, 발표를 준비함.
+A.X의 개발 타임라인과 일치함.
+
+### Post-training 방법
+
+LLM의 지식을 "사람"이 "유용"하게 사용할 수 있도록 만든다.
+- Pre-training: 언어 이해 능력 / 지식을 위한 대규모 텍스트 학습(100B+)
+- Post-training: 모델을 특정 목적에 맞게 조정(~1B 토큰)
+
+목적성 부여. 포맷팅.
+
+system, user, assistant 등의 special token을 사용해 포맷(턴, 역할 등)을 부여.
+SFT(Supervised Fine-Tuning)
+
+학습하고자 하는 포맷의 데이터 확보.
+다음 토큰에 대한 예측
+
+ex) LLM의 function-call기능: search를 수행하고 포맷을 정리해서 반환하도록 tools 태그 삽입
+
+SFT만으로 학습은 충분하지 않다.
+
+### Alignment Tuning: 사람의 의도와 가치관에 맞게 동작하도록 고도화하는 과정
+
+- Supervised의 한계: "Positive Response"만 학습한다
+- 사람에게 최고의 답변이 아닐 수 있다. 의도와 가치관을 반영해서 답변해야 함.
+
+창작의 영역은 어렵지만, 여러 답변 중에 선택하도록 만드는 것은 해낼 수 있다.
+모델이 학습을 통해서 A, B가 아니라 더 좋은 답변 C를 만들어내도록 만들자.는 개념.
+
+- RLHF: 선호도(Preference) 데이터 수집 -> Reward Model 학습 -> 강화학습
+    - pipeline이 복잡해지고 해야하는 작업이 많다
+- DPO(Direct Perference Optimization): 간단한 알고리즘
+- Knowledge Distillation: 가격이 저렴한데 잘하는 모델들이 등장. 이 학습방법의 영향. Teacher - Student: 확률. Teacher 모델과 거의 유사하게.
+
+### 2025 Post-training 트렌드
+
+o1, Deepseek에서 Reasoning, Reinforced Learning
+
+프롬프트 엔지니어링 화두: `Chain of thought` step by step.
+응답의 과정에서 중간에 정리하는 것.
+
+Reasoning Model Process
+- step by step을 사용하면 중간 과정이 너무 많으므로, 생략이 필요할 수 있음
+- Reasoning Format
+
+Alignment Tuning을 다시 살펴보면...
+선호도(Preference)는 다 다른다. 인간 군상의 평균정도의 선호도? 부정확하다. RM 학습에 영향을 주고, 학습 불안정 및 성능 저하가 발생한다.(잘못된 피드백. 리워드 해킹)
+
+RLVR(Reinforced Learning with Verifiable Reward)
+
+- 정답이 맞는지 아닌지 채점을 할수있게 만들자. 정답이 있는 데이터를 수집함.
+
+### 앞으로의 방향성
+
+LLM Training Cycle에 대해서.
+
+- Pre-training
+- Post-training
+- Frontier 돌파(RL, Agentic, Reasoning)
+- 고품질 합성 데이터 생성 (데이터가 부족하기 때문)
+- 데이터 분포 조정
+- 반복
+
+인터넷에 있는 데이터는 이미 고갈되었다. 더 키우고 싶다면 만들어내는 과정이 필요.
+
+Longer & Precise Reasoning
+고등교육 -> 전문 수학자 -> 새로운 Math Theorem 발견
+
+LLM 구조상 length가 길어질수록 context 소실 등 취약점이 발생하므로, 이 부분을 눈여겨본다.
+
+### Recap
+
+학습은 다 열려있다.
+데이터를 만드는 것이 문제. 어디서 얻어오고, 어떻게 생성해서 공급할 것인가?
+
+고품질 합성 데이터를 생성하는 것이 Frontier 모델 개발의 주요 상품이 될 것으로 예상.
+원클릭 데이터 생성/학습.
 
 ## Document AI 서비스 성장스토리: From 1 to 100, and beyond
 
