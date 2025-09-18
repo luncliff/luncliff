@@ -11,4 +11,5 @@
 - [libjpeg C API](./posts/working-with-libjpeg.md)
 - [NDK Change Log 읽으면서 한 생각들](./posts/ndk-changelog-comments.md)
 - [OpenSSL 3.0 빌드 방법](./posts/build-openssl3.md)
+- 2025-09-18 [한빛 Devground 2025 메모](./posts/note-hanbit-devground-2025.md)
 - ...?
