@@ -12,7 +12,8 @@
 - [NDK Change Log 읽으면서 한 생각들](./posts/ndk-changelog-comments.md)
 - [OpenSSL 3.0 빌드 방법](./posts/build-openssl3.md)
 - 2023-10-28 [C++ Korea 2023년 10월 MeetUp: Conan C++ 패키지 매니저 살짝 맛보기](./posts/2023-10-28%20conan_cpp_for_kor.md)
+- 2025-04-23 [구름 COMMIT 2504](./posts/2025-04-23%20구름%20COMMIT.md)
 - 2025-08-11 [민주동덕에 봄은오는가](./posts/민주동덕에_봄은오는가.md)
-- 2025-08-25 [구름 COMMIT 2504](./posts/2025-08-25%20구름%20COMMIT.md)
 - 2025-09-18 [한빛 Devground 2025 메모](./posts/note-hanbit-devground-2025.md)
+- 2025-09-24 [구름 COMMIT 2509](./posts/2025-09-24%20구름%20COMMIT.md)
 - ...?
