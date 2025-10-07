@@ -7,6 +7,12 @@
 
 - https://stable-diffusion-art.com/beginners-guide/
 - https://github.com/AUTOMATIC1111/stable-diffusion-webui
+- [Civitai Beginners Guide To AI Art // Core Concepts](https://youtu.be/IIy3YwsXtTE)
+- [스테이블 디퓨전 (Stable Diffusion)](https://youtube.com/playlist?list=PLKuQxQX8EZn1QDf04CEoNEvaWOqnjeY0e) - Simple AI (A01demort) 
+
+### Internals
+
+- [Diffusion Models for AI Image Generation](https://youtu.be/x2GRE-RzmD8) - IBM Technology
 
 ## Setup
 
@@ -70,6 +76,7 @@ python -m pip install -r requirements_versions.txt
 Readme를 따라서 설치해보니 PyTorch 2.8.0 CPU 버전이 사용되는 것을 확인함.
 
 ```python3
+# test-pytorch.py
 import torch
 
 print("PyTorch:", torch.__version__)
@@ -84,16 +91,25 @@ print("GPU count:", torch.cuda.device_count())
 
 ```powershell
 # commands to Copy-Paste in Windows Terminal
-pip install torch==2.2.0 torchvision==0.17.0 torchaudio==2.2.0 --index-url https://download.pytorch.org/whl/cu121
+pip install torch==2.2.0 torchvision==0.17.0 torchaudio==2.2.0 --index-url "https://download.pytorch.org/whl/cu121"
 python -m pip install -r requirement_versions.txt
 ```
 
+requirements_versions.txt도 이에 맞게 수정함.
 ```
-# requirements_versions.txt patch
 # pip install ... --index-url https://download.pytorch.org/whl/cu121
 torch==2.2.0
 torchvision==0.17.0
 torchaudio==2.2.0
+```
+
+```console
+> python .\test-pytorch.py                                                    
+PyTorch version: 2.2.0+cu121
+CUDA available: True
+CUDA version: 12.1
+cuDNN version: 8801
+Number of GPUs: 1
 ```
 
 ### Downloading SafeTensors
@@ -110,3 +126,33 @@ torchaudio==2.2.0
 ## Notes
 
 ...
+
+### Utilization
+
+- In Use RAM: 23.5 GB (Commited 37 GB)
+- GPU Dedicated Memory가 바로 5.7GB까지 올라가는 것 확인
+
+자원이 많지 않으므로 low 옵션 추가
+
+```bat
+@REM See modules/cmd_args.py
+set COMMANDLINE_ARGS=---lowvram --lowram
+```
+
+## Troubleshooting
+
+### "your video card does not support half type"
+
+`Upcast cross attention layer to float32`를 🟪에서 ☑️상태로 변경 - 효과 없었음
+
+```log
+stable-diffusion-webui\modules\devices.py", line 255, in test_for_nans
+        raise NansException(message)
+    modules.devices.NansException: A tensor with all NaNs was produced in Unet. This could be either because there's not enough precision to represent the picture, or because your video card does not support half type. Try setting the "Upcast cross attention layer to float32" option in Settings > Stable Diffusion or using the --no-half commandline argument to fix this. Use --disable-nan-check commandline argument to disable this check.
+```
+
+webui-user.bat에서 `--no-half` 옵션으로 실행 시도.
+
+```bat
+set COMMANDLINE_ARGS=--no-half
+```
