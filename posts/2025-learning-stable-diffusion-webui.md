@@ -123,6 +123,25 @@ Number of GPUs: 1
 
 - https://github.com/picobyte/stable-diffusion-webui-wd14-tagger
 
+### LoRA Training
+
+기본 WebUI 사용법을 익히고, 가지고 있는 이미지 파일들을 사용해 LoRA 훈련에 도전해보기로.
+
+- https://github.com/bmaltais/kohya_ss/tree/v25.2.1
+- https://github.com/kohya-ss/sd-scripts
+- https://stable-diffusion-art.com/train-lora/
+- https://stable-diffusion-art.com/train-lora-sdxl/
+
+Checkpoint를 결정해야 한다고 해서...
+
+- https://stable-diffusion-art.com/sdxl-model/
+- https://stable-diffusion-art.com/models/
+- https://huggingface.co/stablediffusionapi/anything-v5
+
+YouTube 동영상 참고목록
+
+- https://youtu.be/vA2v2IugK6w?si=VOa_uaqi1swCEPYT
+
 ## Notes
 
 ...
