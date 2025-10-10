@@ -18,7 +18,9 @@
 
 ### System Check
 
-Surface Book 3에서 구동하는 것이 목표
+#### Microsoft Surface Book 3
+
+Surface Book 3에서 구동하는 것이 목표였으나, GPU memory가 충분하지 않음. 간단한 1024x1024 이미지 정도는 생성 가능한 것을 확인함.
 
 ```console
 > systeminfo
@@ -66,6 +68,19 @@ Pop-Location
 python -m venv venv
 .\venv\Scripts\Activate.ps1
 python -m pip install -r requirements_versions.txt
+```
+
+#### Samsung Galaxy Book 5 Pro
+
+Intel Arc(TM) 140V GPU 내장. Intel AI Boost 기능(NPU)이 있는 경우는 사용 가능할까...?  
+(GPU Memory 18GB로 조금 더 높은 수준)
+
+CUDA 사용이 불가하므로, 아래의 옵션으로 기능 비활성화 해야함.
+
+```bat
+set COMMANDLINE_ARGS=--skip-torch-cuda-test
+
+call webui.bat
 ```
 
 ### PyTorch with CUDA
