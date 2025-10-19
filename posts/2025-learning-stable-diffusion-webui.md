@@ -1,3 +1,4 @@
+# Learning Stable Diffusion WebUI
 
 2023년에 잠깐 맛보기만 해봤던 Stable Diffusion 도구에 대해서 공부한 내용.
 

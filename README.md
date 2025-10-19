@@ -1,11 +1,10 @@
-
-### Status
+# luncliff's GitHub Profile
 
 [![GitHub Status](https://github-readme-stats.vercel.app/api?username=luncliff)](https://github.com/anuraghazra/github-readme-stats)
 
 ![Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=luncliff&langs_count=6&layout=compact)
 
-### Posts
+## Posts(낙서장)
 
 - [Exploring MSVC Coroutine](./posts/Exploring-MSVC-Coroutine.md) / [한국어](./posts/MSVC-Coroutine-알아보기.md)
 - [libjpeg C API](./posts/working-with-libjpeg.md)
@@ -16,4 +15,5 @@
 - 2025-08-11 [민주동덕에 봄은오는가](./posts/민주동덕에_봄은오는가.md)
 - 2025-09-18 [한빛 Devground 2025 메모](./posts/note-hanbit-devground-2025.md)
 - 2025-09-24 [구름 COMMIT 2509](./posts/2025-09-24%20구름%20COMMIT.md)
+- 2025-10 [Stable Diffusion WebUI 학습](./posts/2025-learning-stable-diffusion-webui.md)
 - ...?
