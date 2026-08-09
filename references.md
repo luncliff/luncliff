@@ -5,7 +5,12 @@
 
 ## Tools
 
-### VS Code
+### Microsoft Agent Package Manager (APM)
+
+- <https://microsoft.github.io/apm/getting-started/installation/>
+- <https://microsoft.github.io/apm/reference/>
+
+### Visual Studio Code
 
 - <https://code.visualstudio.com/docs/agents/overview>
 - [Custom agents](https://code.visualstudio.com/docs/copilot/customization/custom-agents)
