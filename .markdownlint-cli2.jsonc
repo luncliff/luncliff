@@ -1,0 +1,10 @@
+{
+    "globs": [
+        "**/*.md"
+    ],
+    "ignores": [
+        "posts/**",
+        "node_modules/**",
+        "llmwiki/**"
+    ]
+}
