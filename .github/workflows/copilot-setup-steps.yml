@@ -1,0 +1,27 @@
+name: Copilot Setup Steps
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/copilot-setup-steps.yml
+  pull_request:
+    paths:
+      - .github/workflows/copilot-setup-steps.yml
+
+permissions:
+  contents: read
+
+jobs:
+  copilot-setup-steps:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - name: "Install APM"
+        run: |
+          curl -sSL https://aka.ms/apm-unix | sh
+
+      - name: "Install Copilot dependencies"
+        run: |
+          apm install --frozen --target copilot
