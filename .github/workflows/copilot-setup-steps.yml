@@ -24,4 +24,4 @@ jobs:
 
       - name: "Install Copilot dependencies"
         run: |
-          apm install --frozen --target copilot
+          apm install --target copilot
