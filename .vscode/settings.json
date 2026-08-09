@@ -1,0 +1,21 @@
+{
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": true,
+        "scminput": false
+    },
+    "chat.agent.enabled": true,
+    "chat.checkpoints.showFileChanges": true,
+    "chat.subagents.allowInvocationsFromSubagents": true,
+    "chat.unifiedAgentsBar.enabled": true,
+    "chat.viewProgressBadge.enabled": true,
+    "chat.tools.urls.autoApprove": {
+        "https://github.com/microsoft/vscode/wiki/*": true,
+        "https://*.github.com": true,
+        "https://github.com": true,
+        "https://code.visualstudio.com": true
+    },
+    "python.envFile": "${workspaceFolder}/.env"
+}

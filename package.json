@@ -1,0 +1,20 @@
+{
+  "name": "luncliff-workspace",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Personal knowledge base and dev environment setup for VS Code + GitHub Copilot CLI",
+  "scripts": {
+    "lint": "npm run lint:markdown && npm run lint:json",
+    "lint:json": "eslint . --fix",
+    "lint:markdown": "markdownlint-cli2 --fix"
+  },
+  "devDependencies": {
+    "eslint": "^10.8.1",
+    "eslint-plugin-jsonc": "^3.4.1",
+    "markdownlint-cli2": "^0.23.2",
+    "npm-run-all2": "^9.0.3"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}
