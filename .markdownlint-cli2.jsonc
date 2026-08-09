@@ -1,10 +1,15 @@
 {
+    "config": {
+        "MD013": false
+    },
     "globs": [
         "**/*.md"
     ],
     "ignores": [
-        "posts/**",
+        ".agents/**",
+        ".claude/**",
         "node_modules/**",
-        "llmwiki/**"
+        "apm_modules/**",
+        "posts/**"
     ]
 }
