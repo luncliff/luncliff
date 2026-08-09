@@ -1,6 +1,6 @@
 # References
 
-## Copilot & VS Code
+## Tools
 
 - [Custom agents](https://code.visualstudio.com/docs/copilot/customization/custom-agents)
 - [Agent skills](https://code.visualstudio.com/docs/copilot/customization/agent-skills)
@@ -8,3 +8,8 @@
 - [Subagents](https://code.visualstudio.com/docs/copilot/agents/subagents)
 - [Custom instructions](https://code.visualstudio.com/docs/copilot/customization/custom-instructions)
 - [Copilot CLI](https://code.visualstudio.com/docs/copilot/agents/copilot-cli)
+
+## Instructions
+
+- <https://github.com/agentsmd/agents.md>
+- <https://architecture.md/>
