@@ -1,0 +1,64 @@
+name: luncliff-workspace
+version: 0.0.0
+description: luncliff's GitHub Workspace
+author: luncliff
+targets:
+- copilot
+- claude
+dependencies:
+  apm:
+  - github/awesome-copilot/plugins/context-engineering#v2.1
+  - github/awesome-copilot/skills/acquire-codebase-knowledge#v2.1
+  - github/awesome-copilot/skills/add-educational-comments#v2.1
+  - github/awesome-copilot/skills/agentic-eval#v2.1
+  - github/awesome-copilot/skills/napkin#v2.1
+  - github/awesome-copilot/skills/copilot-pr-autopilot#v2.1
+  - github/awesome-copilot/skills/copilot-sdk#v2.1
+  - github/awesome-copilot/skills/copilot-spaces#v2.1
+  - github/awesome-copilot/skills/copilot-usage-metrics#v2.1
+  - github/awesome-copilot/skills/security-review#v2.1
+  - github/awesome-copilot/skills/github-actions-efficiency#v2.1
+  - github/awesome-copilot/skills/github-copilot-starter#v2.1
+  - github/awesome-copilot/skills/github-issues#v2.1
+  - github/awesome-copilot/skills/github-release#v2.1
+  - github/awesome-copilot/skills/microsoft-agent-framework#v2.1
+  - github/awesome-copilot/skills/microsoft-code-reference#v2.1
+  - github/awesome-copilot/skills/microsoft-docs#v2.1
+  - github/awesome-copilot/skills/update-specification#v2.1
+  - mattpocock/skills/skills/productivity/grilling#v1.2.3
+  - mattpocock/skills/skills/productivity/handoff#v1.2.3
+  - mattpocock/skills/skills/productivity/teach#v1.2.3
+  - mattpocock/skills/skills/productivity/to-questionnaire#v1.2.3
+  - mattpocock/skills/skills/productivity/wait-what#v1.2.3
+  - mattpocock/skills/skills/productivity/writing-for-agents#v1.2.3
+  mcp:
+  - microsoft/playwright-mcp
+  - name: github
+    registry: false
+    transport: http
+    url: https://api.githubcopilot.com/mcp
+  - name: memory
+    registry: false
+    transport: stdio
+    command: npx
+    args:
+    - -y
+    - '@modelcontextprotocol/server-memory'
+  - name: filesystem
+    registry: false
+    transport: stdio
+    command: npx
+    args:
+    - -y
+    - '@modelcontextprotocol/server-filesystem'
+    - .
+  - name: legalize-kr
+    registry: false
+    transport: stdio
+    command: uvx
+    args:
+    - --with
+    - mcp==1.29.0
+    - --from
+    - legalize-cli[mcp]==0.3.3
+    - legalize-mcp
