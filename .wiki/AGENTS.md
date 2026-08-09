@@ -23,10 +23,12 @@
 ### Frontmatter Schema
 
 **Required fields:**
+
 - `type` — Page type (entity, concept, source, summary, query)
 - `title` — Page title
 
 **Optional fields:**
+
 - `tags` — Array of tag strings
 - `sources` — Array of source references
 - `created` — Creation date (YYYY-MM-DD)
