@@ -1,0 +1,15 @@
+{
+  "name": "luncliff-workspace",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Personal knowledge base and dev environment setup for VS Code + GitHub Copilot CLI",
+  "scripts": {
+    "lint": "markdownlint-cli2"
+  },
+  "devDependencies": {
+    "markdownlint-cli2": "^0.23.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
