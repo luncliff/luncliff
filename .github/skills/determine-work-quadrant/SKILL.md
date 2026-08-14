@@ -1,6 +1,6 @@
 ---
 name: determine-work-quadrant
-description: 'Place a task in the Owning / Learning / Teaching / Delegating quadrant from the detail it demands and the proficiency you hold, plot it as a Mermaid quadrant chart, and name the move that changes the placement. Use when deciding whether to do, learn, teach, or delegate a task; when asking "should I take this on or hand it off?"; when planning a quarter, a workload, or a team assignment; when reviewing a work portfolio against a growth or leadership level.'
+description: 'Assess a person-task pairing using detail demanded and proficiency held. Place each task in Owning, Learning, Teaching, or Delegating; plot the result in a Mermaid quadrant chart; state the evidence, next move, and exit condition. Use to decide who should do, learn, teach, or delegate a task, allocate work for a quarter or team, or review a portfolio for growth and leadership capacity.'
 ---
 
 # Determine Work Quadrant

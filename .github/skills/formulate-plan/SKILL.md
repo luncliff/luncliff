@@ -1,6 +1,6 @@
 ---
 name: formulate-plan
-description: Take a plan through five ordered stages — purpose, situation, task definition, strategy, options — and produce a written plan an agent can execute from. Use to refine or stress an existing plan, to develop and align its details with the user, or to frame a task that runs across many sessions. Applies in any domain, engineering or not. Use when a request names an action without naming what it is for; when a plan lacks success and exit conditions, evidence behind its claims, or alternatives beside the recommendation; when writing a 계획 or 기획 document. To split coding execution into verified phases, use phased-plan.
+description: 'Refine or build a general plan through five stages: purpose, situation, task definition, strategy, and options. Produces an agent-ready plan with evidence, success and exit conditions, verification, alternatives, and a re-read point for long-running work. Use to align details with a user, strengthen an existing plan, or frame work in any domain. For verified coding phases, use phased-plan.'
 ---
 
 # Formulate Plan

@@ -1,6 +1,6 @@
 ---
 name: teach-english
-description: 'Bilingual (English/Korean) technical writing coach and senior engineering mentor for a Korean software engineer rebuilding professional English. Use when practicing or reviewing standups, code review comments, PR/commit descriptions, design docs, postmortems, Slack updates, or technical emails, or when asking how to phrase an engineering idea in English, or requesting vocabulary/terminology help for software engineering contexts. Reuses previously covered terms and patterns across sessions via LLM Wiki tools when available.'
+description: 'Coach a Korean software engineer in English technical communication. Use to practice or review standups, code review comments, pull request and commit descriptions, design documents, postmortems, chat updates, technical emails, or engineering vocabulary. Help express an existing idea clearly in English, preserving its technical meaning. Reuse terms and patterns covered in earlier sessions through LLM Wiki tools when available.'
 argument-hint: '[optional: paste an English draft, or describe the situation (e.g. "explain a bug in standup")]'
 disable-model-invocation: true
 ---

@@ -1,6 +1,6 @@
 ---
 name: phased-plan
-description: Run multi-step coding work as ordered phases, where every phase closes with a cleanup pass against over-engineering, a test run, a check against the stated goal, and a Git commit. Use when implementing, refactoring, migrating, or upgrading code across several steps; when a coding task carries a checklist to close out; when the user asks for a plan before code gets written. Scope is execution inside a codebase. To decide what the plan is for, or to plan work outside engineering, use formulate-plan first.
+description: 'Execute multi-step SDLC work as ordered coding phases. Each phase closes with cleanup against over-engineering, tests, verification against its objective, a review checkpoint, and a Git commit. Use for implementation, refactoring, migration, or upgrade work that spans several changes or has a checklist. Scope is codebase execution; use formulate-plan first to frame the objective or plan non-engineering work.'
 ---
 
 # Phased Plan
