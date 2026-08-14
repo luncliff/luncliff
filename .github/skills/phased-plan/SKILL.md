@@ -1,21 +1,34 @@
 ---
 name: phased-plan
-description: Split multi-step work into ordered phases that each end in an independent verification and a review checkpoint. Use when implementing or refactoring across several steps, when a task has a checklist to close out, or when the user asks for a plan before execution.
+description: Run multi-step coding work as ordered phases, where every phase closes with a cleanup pass against over-engineering, a test run, a check against the stated goal, and a Git commit. Use when implementing, refactoring, migrating, or upgrading code across several steps; when a coding task carries a checklist to close out; when the user asks for a plan before code gets written. Scope is execution inside a codebase. To decide what the plan is for, or to plan work outside engineering, use formulate-plan first.
 ---
 
 # Phased Plan
 
-Ordered phases keep each step verifiable on its own and keep failures local.
+Ordered phases keep each step verifiable on its own and keep failures local. This skill covers execution against a codebase: the objective is already settled, and the question is how the change lands.
+
+When the objective is not settled — or the work is not code — run `formulate-plan` first and bring its task statements here.
 
 ## Procedure
 
 1. Restate the objective and the definition of done.
-2. Split the work into phases. Each phase has to be independently verifiable and end in a result someone can observe.
+2. Split the work into phases. A phase that cannot be verified without the next one is not a phase; merge it or move the boundary.
 3. Run one phase at a time. Do not batch phases.
-4. Close a phase with an observed result: a test run, a command output, or a driven flow.
+4. Close the phase with the four steps below, in order.
 5. Review the closed phase before opening the next one. Delegate the review to a subagent and resolve its findings first.
 6. Report what changed, what was verified, and what is still open.
 
+## Closing a phase
+
+| Step | What it does | What it leaves behind |
+| --- | --- | --- |
+| Cleanup | Take out what this phase added and no longer needs: dead paths, unused abstractions, fallbacks, scaffolding, commented-out code, configuration nothing reads. Anything the phase objective does not require comes out before the commit. | A diff carrying only the change the objective asked for |
+| Validation | Run the tests. A new behavior arrives with a test that failed before the change and passes after it. Real behavior and real dependencies. | The command and its result |
+| Verification | Put the observed result next to the phase objective and the definition of done, and state which parts each one closes. Inspection is not verification. | The objective restated beside the observation that settles it |
+| Commit | Commit the phase as one unit. The message names the objective and the verification. Nothing from this phase stays uncommitted when the next one opens. | One commit per phase |
+
+Pushing is a separate act and needs the user to ask for it.
+
 ## Completion
 
-A phase is closed only when its code changes and its verification artifacts are both done. When the task also names tracker, report, or worklog updates, close those before calling the work complete. Report a blocked check as a gap with the evidence, and do not advance past it silently.
+A phase is closed only when all four steps are done. When the task also names tracker, report, or worklog updates, close those before calling the work complete. Report a blocked check as a gap with its evidence, and do not advance past it silently.

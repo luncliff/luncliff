@@ -1,13 +1,23 @@
 ---
 name: formulate-plan
-description: 'Build a plan through five ordered stages — purpose, situation, task definition, strategy, options — so the slots a plan usually leaves empty get filled before execution. Use when drafting or reviewing a plan, a proposal, a roadmap, a 계획 or a 기획 document; when a request names an action without naming what it is for; when a plan needs success and exit conditions, evidence behind its claims, or alternatives beside the recommendation. Produces a plan document, not code changes.'
+description: Take a plan through five ordered stages — purpose, situation, task definition, strategy, options — and produce a written plan an agent can execute from. Use to refine or stress an existing plan, to develop and align its details with the user, or to frame a task that runs across many sessions. Applies in any domain, engineering or not. Use when a request names an action without naming what it is for; when a plan lacks success and exit conditions, evidence behind its claims, or alternatives beside the recommendation; when writing a 계획 or 기획 document. To split coding execution into verified phases, use phased-plan.
 ---
 
 # Formulate Plan
 
 A plan fails at the slots nobody filled, not at the steps someone wrote down. The five stages run in order because each consumes the previous one: an unstated purpose makes the situation unreadable, an unread situation makes the tasks arbitrary, undefined tasks make the strategy unfalsifiable.
 
-The output is a written plan. The user decides. This skill supplies the material the decision is made from, and states no preference the user did not ask for.
+The output is a written plan, and its reader is an agent that will act on it without asking. Anything left implicit gets filled in by whoever runs it. The user decides. This skill supplies the material the decision is made from, and states no preference the user did not ask for.
+
+## Entry modes
+
+| Mode | Where to start | What changes |
+| --- | --- | --- |
+| New plan | Stage 1 | Run all five stages |
+| Existing plan to refine | Stage 1, reading the plan as a claim rather than a given | Map the plan's contents onto the five stages, and treat every stage with nothing mapped to it as a gap |
+| Long-running task | Stage 1 | Carry the re-read point in stage 4, since the situation the plan rests on will move before the work ends |
+
+Refining is not editing prose. A plan that states five actions and no purpose has one filled stage and four gaps; report it that way before changing a word.
 
 ## Stages
 
@@ -50,7 +60,7 @@ Do not rank findings here. Ranking depends on answers that do not exist until st
 
 ## 3. Task definition
 
-Run the [`grilling`](../../../.agents/skills/grilling/SKILL.md) skill. Ask the whole frontier in one round — every question whose prerequisites are already settled — numbered, each with a recommended answer. Wait for the answers, then recompute the frontier.
+Run the `grilling` skill. Ask the whole frontier in one round — every question whose prerequisites are already settled — numbered, each with a recommended answer. Wait for the answers, then recompute the frontier.
 
 First round, in priority order, because everything else hangs off these:
 
@@ -71,9 +81,10 @@ Stage 3 closes when the frontier is empty and the user states that the alignment
 
 For each task, pair an action with the verification that closes it. Write the verification first; an action written first tends to arrive with a check shaped to pass.
 
-- **Action** — what changes, in what order, and what it depends on. Hand the ordering to [`phased-plan`](../phased-plan/SKILL.md) when execution begins.
+- **Action** — what changes, in what order, and what it depends on. When the actions are code changes, hand execution to [`phased-plan`](../phased-plan/SKILL.md) and stop describing the steps here.
 - **Verification** — the observable that shows the action landed: a run, a measurement, a driven flow, a countersigned artifact. Real behavior and real dependencies. A check that cannot be run is reported as a gap, not replaced by a substitute.
 - **Leading signal** — what reads early, before the success condition can read at all.
+- **Re-read point** — for work spanning more than one session, the date, milestone, or observation at which this plan is checked against what has actually happened, and what would trigger rewriting it.
 - **Stop condition** — the observation that ends this strategy.
 - **Rationale** — the stage-2 findings it rests on, what it optimizes, and what it gives up.
 
@@ -99,16 +110,19 @@ Close by naming the decision that only the user can make. Do not make it.
 | Out of scope | 3 | Absence reads as exclusion | An explicit list |
 | Who accepts the result | 3 | The doer is known, so acceptance is assumed | The person who says it is done |
 | Leading signal | 4 | The final measure is already defined | Something that reads before the outcome does |
+| Re-read point | 4 | The plan is treated as fixed once it is written | A date, milestone, or observation that triggers re-reading it |
 | Stop condition | 4 | Failure is treated as delay | The observation that ends the strategy |
 | Cost of doing nothing | 5 | The plan exists, so acting is assumed | The same fields every other option gets |
 
 ## Register
 
-The plan is read to make a decision, so the writing carries information and not pressure.
+The plan is read to make a decision and then handed to an agent to act on, so the writing carries information and not pressure, and leaves nothing to be inferred at execution time.
 
 - Use counts, magnitudes, dates, and units with a reference point. Drop evaluative adjectives — obvious, clear, simple, best, critical, huge — and superlatives.
 - One claim, one source. Anything unsourced carries `unverified` and the check that would settle it.
 - Mark observation, inference, and assumption in the sentence that makes the claim.
+- Name files, systems, people, and dates outright. A referent that only the current conversation supplies does not survive the handoff.
+- Write each task so it can be handed to a subagent on its own, without the surrounding plan.
 - Give an option's cost the same space as its benefit.
 - Rank only by a stated criterion. Do not steer with ordering, emphasis, or repetition.
 - State the recommendation once, labeled, with its criterion, rather than threading it through the prose.
