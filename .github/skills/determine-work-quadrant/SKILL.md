@@ -33,14 +33,15 @@ Movement is a cycle: **Learning → Owning → Teaching → Delegating → capac
 2. **Score.** Give each task an X and a Y in 0.0–1.0, and write the observation behind each number — a shipped artifact, a review someone passed, a failure that happened. A score with no evidence is a guess; label it as one.
 3. **Plot.** Emit the Mermaid chart below.
 4. **Read the boxes.** For each task: the box, the move, and the exit condition stated as an observable fact.
-5. **Read the shape.** Apply the portfolio table, and say what the distribution reveals about the current level.
-6. **Close with two bets and one challenge.** Name exactly one growth bet (the Learning task to force through to Owning) and one release bet (the task to push out of Owning). Then state the one uncomfortable thing the board implies and ask the single question only the user can answer.
+5. **Report delegated work.** When an LLM or agent completes a Delegating task, return a compact handoff: the outcome against its acceptance criteria, the delegation level and inputs used, the resulting artifact or evidence, and two to four points that explain the decision, reusable rule, or review boundary. Keep the explanation tied to the task; teach only what helps the user reuse, assess, or extend the result.
+6. **Read the shape.** Apply the portfolio table, and say what the distribution reveals about the current level.
+7. **Close with two bets and one challenge.** Name exactly one growth bet (the Learning task to force through to Owning) and one release bet (the task to push out of Owning). Then state the one uncomfortable thing the board implies and ask the single question only the user can answer.
 
 ## Chart
 
 ```mermaid
 quadrantChart
-    title Work Quadrant - <scope/task>
+    title Work Portfolio - <scope/task>
     x-axis Compressible detail --> Irreducible detail
     y-axis Below the bar --> Above the bar
     quadrant-1 Owning - Do
