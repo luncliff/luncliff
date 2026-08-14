@@ -4,7 +4,7 @@ description: luncliff's GitHub Workspace
 author: luncliff
 targets:
 - copilot
-- claude
+# - claude
 dependencies:
   apm:
   - github/awesome-copilot/plugins/context-engineering#v2.1
