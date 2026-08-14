@@ -12,7 +12,7 @@
 
 ### Directory Structure
 
-- `raw/` — Raw ingested documents
+- `raw/` — one-off raw sources (external material, meeting notes, etc.) not already tracked elsewhere in the repo. Hand-written posts already live in the repo's [`posts/`](../posts/) folder — ingest them from there directly; do not copy them into `raw/`.
 - `wiki/` — Processed wiki pages
   - `wiki/entities/` — Entity pages
   - `wiki/concepts/` — Concept pages
@@ -76,7 +76,7 @@ results_count: <number of results>
 
 ### Ingest Workflow
 
-1. Place a raw file in the `raw/` directory (or run **LLM Wiki: Add Source** from the Command Palette).
+1. For the repo's hand-written posts, ingest directly from the repo's [`posts/`](../posts/) folder — do not copy them into `raw/` first. For any other one-off source material, place the file in the `raw/` directory (or run **LLM Wiki: Add Source** from the Command Palette).
 2. The extension automatically ingests new sources and writes a summary page in `wiki/sources/`.
 3. `wiki/index.md` is updated with the new entry.
 4. `wiki/log.md` records the ingestion event.
