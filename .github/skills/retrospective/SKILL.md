@@ -10,7 +10,7 @@ Digest the whole session — not only what the user explicitly calls out — and
 ## Categories
 
 | File | Purpose |
-|---|---|
+| --- | --- |
 | `docs/tech-learning.md` | A concept or technique a person now understands, must teach, or must relearn |
 | `docs/business-value.md` | Which criteria decided a decision's worth, given the goal at hand |
 | `docs/code-quality.md` | A module too tangled or too scattered, and the resulting comment/refactor call |
