@@ -51,7 +51,7 @@ quadrantChart
     Task name: [0.80, 0.75]
 ```
 
-Mermaid maps `quadrant-1` to top-right and counts counter-clockwise. Keep colons out of point names; the `<label>: [x, y]` form breaks otherwise. Add `radius: 12` to the one or two tasks that carry the most weight so the chart shows stakes, not just position.
+Mermaid maps `quadrant-1` to top-right and counts counter-clockwise. Keep additional colons out of point labels (besides the required `label: [x, y]` separator); `Foo: bar: [0.2, 0.8]` will break parsing. Add `radius: 12` to the one or two tasks that carry the most weight so the chart shows stakes, not just position.
 
 ## Portfolio shapes
 

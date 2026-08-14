@@ -60,7 +60,7 @@ Do not rank findings here. Ranking depends on answers that do not exist until st
 
 ## 3. Task definition
 
-Run the `grilling` skill. Ask the whole frontier in one round — every question whose prerequisites are already settled — numbered, each with a recommended answer. Wait for the answers, then recompute the frontier.
+Ask the whole frontier in one round — every question whose prerequisites are already settled — numbered, each with a recommended answer. Wait for the answers, then recompute the frontier.
 
 First round, in priority order, because everything else hangs off these:
 

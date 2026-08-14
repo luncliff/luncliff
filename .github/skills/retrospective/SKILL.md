@@ -1,6 +1,6 @@
 ---
 name: retrospective
-description: 'Consolidate durable lessons from the full session into the repository retrospective notes. Classify each takeaway by purpose, read the existing category file, and rewrite it as the current best statement rather than appending a history. Use when the user asks for a retrospective, lessons learned, alignment updates, or a record of verified practices for future work.'
+description: 'Consolidate durable lessons from the full session into the repository retrospective notes. Classify each takeaway by purpose, read (or create if missing) the category file, and rewrite it as the current best statement rather than appending a history. Use when the user asks for a retrospective, lessons learned, alignment updates, or a record of verified practices for future work.'
 ---
 
 # Retrospective
