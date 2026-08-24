@@ -7,7 +7,7 @@ description: 'Execute multi-step SDLC work as ordered coding phases. Each phase 
 
 Ordered phases keep each step verifiable on its own and keep failures local. This skill covers execution against a codebase: the objective is already settled, and the question is how the change lands.
 
-When the objective is not settled — or the work is not code — run `formulate-plan` first and bring its task statements here.
+When the objective is not settled - or the work is not code - run `craft-plan` first and bring its task statements here.
 
 ## Procedure
 

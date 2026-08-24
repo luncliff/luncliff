@@ -1,9 +1,9 @@
 ---
-name: determine-work-quadrant
+name: assess-work-quadrant
 description: 'Assess a person-task pairing using detail demanded and proficiency held. Place each task in Owning, Learning, Teaching, or Delegating; plot the result in a Mermaid quadrant chart; state the evidence, next move, and exit condition. Use to decide who should do, learn, teach, or delegate a task, allocate work for a quarter or team, or review a portfolio for growth and leadership capacity.'
 ---
 
-# Determine Work Quadrant
+# Assess Work Quadrant
 
 A box is a property of the pair (task, this person, right now) — never of the task alone. The same task is Learning for one person and Teaching for others (mostly a S/W Engineer team), and it moves when either side changes. So placement is only the diagnosis. The move out of the box is the point.
 

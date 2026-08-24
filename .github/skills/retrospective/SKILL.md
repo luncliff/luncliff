@@ -5,23 +5,23 @@ description: 'Consolidate durable lessons from the full session into the reposit
 
 # Retrospective
 
-Digest the whole session — not only what the user explicitly calls out — and fold what's durable into this repository's retrospective notes, split by purpose so each file stays about one kind of thing and stays worth reading later. Each file lives flat in `docs/` and is always rewritten as the current best version of itself: never a changelog, never an appended section.
+Digest the whole session — not only what the user explicitly calls out — and fold what's durable into this repository's retrospective notes, split by purpose so each file stays about one kind of thing and stays worth reading later.
+Each file lives flat in `~/user-retrospectives` (for user) and `docs/` (for workspace). They are always rewritten as the current best version of itself: never a changelog, never an appended section.
 
 ## Categories
 
 | File | Purpose |
 | --- | --- |
-| `docs/tech-learning.md` | A concept or technique a person now understands, must teach, or must relearn |
-| `docs/business-value.md` | Which criteria decided a decision's worth, given the goal at hand |
-| `docs/code-quality.md` | A module too tangled or too scattered, and the resulting comment/refactor call |
-| `docs/testing-verification.md` | A claim actually checked against a test, a run, or a reproduction, and what it showed |
-| `docs/architecture-patterns.md` | A structural or pattern choice, its forces, and its consequences |
-| `docs/work-management.md` | How the work itself was planned, tracked, or delegated — process, not code |
-| `docs/misc.md` | A genuine takeaway fitting none of the above; a recurring entry here signals a missing category |
+| `tech-learning.md` | A concept or technique a person now understands, must teach, or must relearn |
+| `business-value.md` | Which criteria decided a decision's worth, given the goal at hand |
+| `code-quality.md` | A module too tangled or too scattered, and the resulting comment/refactor call |
+| `testing-verification.md` | A claim actually checked against a test, a run, or a reproduction, and what it showed |
+| `architecture-patterns.md` | A structural or pattern choice, its forces, and its consequences |
+| `work-management.md` | How the work itself was planned, tracked, or delegated — process, not code |
 
 A session's takeaway can land in several of these files at once: when it plausibly fits more than one category, write it into each, phrased in that file's own terms, rather than duplicating identical text. Infer the category from the session content; ask the user only when a takeaway doesn't clearly belong to any of the seven.
 
-For the fields each category's entries use, see [CATEGORIES.md](CATEGORIES.md).
+For the fields each category's entries use, see [CATEGORIES.md](./CATEGORIES.md).
 
 ## Procedure
 
