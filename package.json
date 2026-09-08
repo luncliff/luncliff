@@ -9,7 +9,7 @@
     "lint:markdown": "markdownlint-cli2 --fix"
   },
   "devDependencies": {
-    "eslint": "^10.8.1",
+    "eslint": "^10.9.1",
     "eslint-plugin-jsonc": "^3.4.1",
     "markdownlint-cli2": "^0.23.2",
     "npm-run-all2": "^9.0.3"
