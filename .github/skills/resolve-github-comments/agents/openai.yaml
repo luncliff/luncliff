@@ -1,0 +1,3 @@
+interface:
+  display_name: "Resolve GitHub Comments"
+  short_description: "Apply, verify, push, and resolve PR review fixes"

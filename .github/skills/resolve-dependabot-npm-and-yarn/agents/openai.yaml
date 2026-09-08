@@ -1,0 +1,4 @@
+interface:
+  display_name: "Resolve Dependabot npm/yarn"
+  short_description: "Resolve npm or Yarn Dependabot merge conflicts"
+  default_prompt: "Resolve the current npm or Yarn Dependabot merge conflict, regenerate the lockfile, and verify the result."
