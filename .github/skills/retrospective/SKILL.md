@@ -5,32 +5,49 @@ description: 'Consolidate durable lessons from the full session into the reposit
 
 # Retrospective
 
-Digest the whole session — not only what the user explicitly calls out — and fold what's durable into this repository's retrospective notes, split by purpose so each file stays about one kind of thing and stays worth reading later. Each file lives flat in `docs/` and is always rewritten as the current best version of itself: never a changelog, never an appended section.
+Digest the whole session — not only what the user explicitly calls out — and fold what's durable into this repository's retrospective notes, split by purpose so each file stays about one kind of thing and stays worth reading later.
+
+## Compactness
+
+Apply the local Caveman Mode principle to the documents: preserve the useful fact, remove the narration.
+
+- Write one takeaway per H3 entry.
+- Keep each entry to one paragraph and 30–60 words; use fewer when the evidence fits.
+- Use the category fields as a compact fact pattern, not as separate labeled sections.
+- Prefer short, direct sentences. State the rule first, then the smallest evidence or consequence that makes it trustworthy.
+- Remove session chronology, repeated context, motivation, tool narration, greetings, and generic advice.
+- Keep names, commands, paths, failures, and observed results only when they change how the lesson is applied or verified.
+- Merge overlapping entries. Do not preserve detail merely because it appeared in the transcript.
+- If a takeaway cannot fit the budget without losing its evidence, split it into separate takeaways or omit it as non-durable.
+
+Known user-level home locations are `${env:USERPROFILE}` in Windows, and `$HOME` in Linux/macOS.
+
+Each file lives flat in `user-retrospectives` (for user-level) and `docs/` (for workspace). They are always rewritten as the current best version of itself: never a changelog, never an appended section.
 
 ## Categories
 
 | File | Purpose |
 | --- | --- |
-| `docs/tech-learning.md` | A concept or technique a person now understands, must teach, or must relearn |
-| `docs/business-value.md` | Which criteria decided a decision's worth, given the goal at hand |
-| `docs/code-quality.md` | A module too tangled or too scattered, and the resulting comment/refactor call |
-| `docs/testing-verification.md` | A claim actually checked against a test, a run, or a reproduction, and what it showed |
-| `docs/architecture-patterns.md` | A structural or pattern choice, its forces, and its consequences |
-| `docs/work-management.md` | How the work itself was planned, tracked, or delegated — process, not code |
-| `docs/misc.md` | A genuine takeaway fitting none of the above; a recurring entry here signals a missing category |
+| `tech-learning.md` | A concept or technique a person now understands, must teach, or must relearn |
+| `business-value.md` | Which criteria decided a decision's worth, given the goal at hand |
+| `code-quality.md` | A module too tangled or too scattered, and the resulting comment/refactor call |
+| `testing-verification.md` | A claim actually checked against a test, a run, or a reproduction, and what it showed |
+| `architecture-patterns.md` | A structural or pattern choice, its forces, and its consequences |
+| `work-management.md` | How the work itself was planned, tracked, or delegated — process, not code |
 
 A session's takeaway can land in several of these files at once: when it plausibly fits more than one category, write it into each, phrased in that file's own terms, rather than duplicating identical text. Infer the category from the session content; ask the user only when a takeaway doesn't clearly belong to any of the seven.
 
-For the fields each category's entries use, see [CATEGORIES.md](CATEGORIES.md).
+For the fields each category's entries use, see [CATEGORIES.md](./CATEGORIES.md).
 
 ## Procedure
 
 1. Digest the full session transcript — not only sentences explicitly flagged as a lesson — before deciding which categories apply.
 2. List every category from the table above that the session's content actually touches. For each one, read that category's file first if it already exists.
-3. For each listed category, rewrite the whole file, merging the new material into the existing content as though authoring its latest version. Never append a section or keep a log of when something was added. Cap headings at H3.
+3. For each listed category, rewrite the whole file, merging the new material into the existing content as though authoring its latest version. Never append a section or keep a log of when something was added. Cap headings at H3. Apply the compactness rules before writing.
 4. Create a file only the first time a category has real content — don't pre-create empty files for categories with nothing to say yet.
 5. Prefer positive, composable rules over prohibitions.
 6. Remove or rewrite entries that later evidence contradicts.
-7. Close by listing every file touched in this pass, so the user knows exactly what's ready to review.
+7. Before finishing, compress every entry once more: remove repeated words, background, and evidence that does not support the takeaway.
+8. Close by listing every file touched in this pass, so the user knows exactly what's ready to review.
 
 This skill only writes inside `docs/`; it never touches `.wiki/`. Ingesting is a separate, human-initiated step: once you've reviewed a file, copy it into `.wiki/raw/` (or run **LLM Wiki: Add Source**), and clean up `docs/` yourself afterward — that housekeeping is yours, not this skill's.
