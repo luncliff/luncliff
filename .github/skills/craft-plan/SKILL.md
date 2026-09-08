@@ -1,9 +1,9 @@
 ---
-name: formulate-plan
+name: craft-plan
 description: 'Refine or build a general plan through five stages: purpose, situation, task definition, strategy, and options. Produces an agent-ready plan with evidence, success and exit conditions, verification, alternatives, and a re-read point for long-running work. Use to align details with a user, strengthen an existing plan, or frame work in any domain. For verified coding phases, use phased-plan.'
 ---
 
-# Formulate Plan
+# Craft Plan
 
 A plan fails at the slots nobody filled, not at the steps someone wrote down. The five stages run in order because each consumes the previous one: an unstated purpose makes the situation unreadable, an unread situation makes the tasks arbitrary, undefined tasks make the strategy unfalsifiable.
 
