@@ -26,6 +26,10 @@ For artifacts refined across turns, carry forward every accepted format, content
 
 Define what observed result will close the task before claiming it works. Artifact inspection, syntax checks, runtime checks, and remote verification close different claims; report the exact claim each check supports.
 
+### Validate before documenting behavior
+
+Do not document an unverified dependency as the repository’s installation behavior. First run the real command in an isolated root, distinguish a successful sub-operation from an overall failure, then update configuration or documentation. This prevents a dry-run or source inspection from being reported as end-to-end support.
+
 ### Delegate only separable work
 
 Use subagents for bounded slices with a complete prompt, owned output, and review boundary. Keep whole-session synthesis, quick status checks, plan reminders, and local repository inspection in the parent thread.

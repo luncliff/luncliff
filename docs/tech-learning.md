@@ -26,6 +26,10 @@ Hook commands can run under different shells. `echo` is available in bash and Po
 
 `dependencies.apm` and `dependencies.mcp` describe different runtime mechanisms. Use the skill or plugin dependency path only after source format and target runtime are verified; an MCP block should launch a server, not stand in for a skill.
 
+### APM refs control breadth and reproducibility
+
+Use `owner/repo/path` when a monorepo exposes one primitive, and append `#ref` when a stable revision matters. A bare repository shorthand follows the latest default branch, but `apm.lock.yaml` pins the resolved commit for later installs. These choices determine both installed scope and update behavior.
+
 ### Prompt, schema, and code enforce different things
 
 Prompts express intent, schemas enforce shape, and deterministic code enforces mechanical guarantees. None substitutes for the others: schema validity does not prove factuality, and prompt wording does not prove runtime structure.

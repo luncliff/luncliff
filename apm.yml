@@ -7,6 +7,7 @@ targets:
 # - claude
 dependencies:
   apm:
+  - github/awesome-copilot
   - github/awesome-copilot/plugins/context-engineering#v2.1
   - github/awesome-copilot/skills/acquire-codebase-knowledge#v2.1
   - github/awesome-copilot/skills/add-educational-comments#v2.1
