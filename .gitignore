@@ -3,6 +3,7 @@ temp
 
 # only maintained skills will be tracked
 .agents/skills
+.github/skills
 .claude/skills
 
 # Created by https://www.gitignore.io/api/visualstudiocode
