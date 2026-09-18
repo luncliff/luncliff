@@ -15,7 +15,3 @@ Removed person-name entities from `wiki/index.md`.
 ## [2026-08-14] ingested | .gitignore
 
 Ingested source ".gitignore" → sources/-summary.md
-
-## [2026-08-14] enriched | sources/-summary.md
-
-LLM created 0 entities, 0 concepts, 0 crosslinks.
