@@ -25,6 +25,10 @@ Install .agents/skills using [Microsoft Agent Package Manager (APM)](https://mic
 apm install
 ```
 
+The manifest also installs the latest default-branch contents from
+`github/awesome-copilot`. Use `apm install --update` to refresh the resolved
+revision after the lockfile has been created.
+
 ### Lint
 
 Install the dependencies in [package.json](./package.json)

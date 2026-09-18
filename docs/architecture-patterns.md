@@ -26,6 +26,10 @@ Names alone do not identify artifact type. `sequential-thinking` can mean an Age
 
 Do not encode a dependency whose manifest syntax or target compatibility was not checked. When `apm` is unavailable, removing a wrong entry is complete work, while adding the intended dependency remains blocked until installation behavior is verified.
 
+### Prefer explicit primitive imports over unverified repository roots
+
+APM supports virtual subdirectory references such as `github/awesome-copilot/skills/<name>`, while a repository-root import requires the source to behave as an installable package. Keep narrow, pinned imports when they are the verified contract; add a broad root only after a real install proves its package structure and collision behavior.
+
 ### Isolate artifacts by storage root
 
 Separate experiment, debug, or test artifacts with distinct roots instead of filename tags inside a shared location. A separate root enforces isolation by construction and avoids extra tracking code that later reports must reconcile.

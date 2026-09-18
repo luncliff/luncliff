@@ -22,6 +22,10 @@ The `sequential-thinking` classification was verified by checking the official M
 
 `apm` was unavailable on `PATH`, so `apm.yml` source syntax, `copilot` target support, and real installation for the intended skill were not verified. The correct result was a blocked dependency addition, not a guessed manifest entry.
 
+### Verify dependency graphs with a real install
+
+An APM dry-run parsed the manifest but did not validate every remote ref. A real isolated `apm install --target copilot` integrated 418 skills from `github/awesome-copilot`, then failed because the existing `#v2.1` refs do not exist upstream. The manifest was therefore not operational end to end.
+
 ### Syntax checks close only syntax claims
 
 Removing an accidental manifest block was validated with editor diagnostics, which proved no YAML error was introduced. It did not prove the intended dependency could be installed, so the correction and follow-up gate stayed separate.
