@@ -38,6 +38,10 @@ A suite that imports removed harness or experiment modules by file path should b
 
 Reusable scripts and skills should own deterministic mechanics only. Data collection, model evaluation, uploads, publication, and one-off artifact variants stay explicit higher-level actions unless the helper's public contract is intentionally expanded.
 
+### Validate contracts, not copies
+
+The first plugin validator enforced byte parity between `.github/skills` and plugin copies, which institutionalized duplication. It now checks the discovery contract: plugin root `./.github`, folder-matching `name`, a description, no model-invocation opt-out, and matching review-agent paths.
+
 ### Flatten wrappers that add no boundary
 
 When a package wrapper only mirrors constructor arguments or adds no deployment boundary, simplify it and update imports, packaging metadata, tests, and documentation together. Thin indirection is maintenance cost unless it protects a real contract.

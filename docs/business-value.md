@@ -14,6 +14,10 @@ A service that promises upstream retrieval needs a probe that exercises upstream
 
 For an APM update, the useful outcome is a successful target installation, not merely a valid-looking manifest or a newer upstream source. The combined `apm install --target copilot` run failed on stale refs, so preserving existing entries had no value until their refs were proven valid or removed.
 
+### Plugin value is equal usable skills
+
+The yardstick for this setup is the same 12 skills usable in VS Code, Copilot CLI, and Codex from one maintained tree. Manifest validity and folder conformance had no value while VS Code lost the skills; runtime counts decided completion.
+
 ### Source-aligned contracts build trust
 
 Public interfaces backed by external providers should use observed provider vocabulary, expose direct provider-resolved URLs when navigation is promised, and omit client-irrelevant provenance. This reduces invented abstractions and avoids making every client rebuild provider routes.

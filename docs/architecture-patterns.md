@@ -46,6 +46,14 @@ Keep source enablement, provider selection, and acquisition-path state inside th
 
 External payloads become typed domain objects in the adapter before they reach workflow, persistence, or API code. Provider-native identity and relationship data stay internal unless consumers need direct navigation or independent addressing.
 
+### Use `.github` as the shared plugin root
+
+Accepted; supersedes `plugins/luncliff-workspace`. VS Code and Copilot CLI discover `.github/skills`, while Agent Plugins require `skills/` at the plugin root, so both marketplaces point to `./.github`. One tracked skill tree serves workspace and installed use; only the review agent needs two host paths, validated byte-identical.
+
+### Package from discovery roots
+
+A separate `plugins/` package separated install sources from workspace discovery paths, forcing either copies or lost discovery. Choose a package root that is already a host discovery path, and add directories only when an official format requires them.
+
 ### Keep orchestration shallow
 
 The public entry method should show lifecycle order, while private methods own one state transition or external boundary each. This keeps workflow failure paths visible to review and test without adding speculative service layers.

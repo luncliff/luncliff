@@ -61,3 +61,23 @@ If the user exempts experiment tooling from unit tests, validation still needs a
 ### Re-run Windows logs as UTF-8
 
 On Windows, classify output-decoding failures separately from application failures. Re-run CLI or GitHub log inspection with UTF-8 output before treating a CP949 or `UnicodeDecodeError` failure as the workflow result.
+
+### Verify discovery in every host after moves
+
+Moving skills into `plugins/luncliff-workspace/skills` passed the package validator, yet a fresh VS Code subagent received none of the 12 workspace skills. After relocating customizations, verify runtime discovery separately in VS Code, Copilot CLI, and Codex; package checks prove only file shape.
+
+### Isolate CLI profiles per check
+
+A persisted `$env:COPILOT_HOME` from an earlier install made `copilot skill list` show plugin skills, hiding a workspace-discovery regression. Set a fresh profile inside each verification command and read the source label, such as `Project` or `Plugin`, before counting.
+
+### Compare runtime counts across hosts
+
+Copilot CLI listed 12 skills while VS Code exposed 11 because `teach-english` set `disable-model-invocation: true`. Equal file counts do not prove equal availability; compare each host's runtime list, then encode the cause in validation.
+
+### Separate client faults from package faults
+
+Copilot 1.0.78 omitted a plugin agent that 1.0.88 listed; the main profile cache failed with os error 5; a classic `GITHUB_TOKEN` blocked agent invocation. Reproduce with the current CLI and fresh profile before changing packages, and report authentication blocks as unverified.
+
+### Check the checkout before claiming replacement
+
+`ci.yml` was reported as replaced while both `ci.yml` and `ci-plugins.yml` still ran on the same events. Confirm file state with `git status` or a listing before reporting a replacement, deletion, or move.

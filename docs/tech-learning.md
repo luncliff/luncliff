@@ -46,6 +46,22 @@ Canonical URLs and permalinks returned by a provider should be treated as provid
 
 For multi-iteration workflows, classify the whole trajectory before blaming the final stage. Separate early success, recovery success, late regression, sustained unavailable state, and final validation failure so the terminal error is not misread.
 
+### Skill discovery paths differ by host
+
+VS Code and Copilot CLI discover project skills in `.github/skills`, `.agents/skills`, or `.claude/skills`; an Agent Plugin exposes `skills/<name>/SKILL.md` under its root. VS Code reads agents from `.github/agents`; Copilot plugin agents live in `com.github.copilot/agents`.
+
+### Invocation flags change visibility
+
+`disable-model-invocation: true` kept `teach-english` in Copilot CLI's skill list but removed it from VS Code agent skill metadata. Use it only when a skill must be user-invoked; otherwise agents cannot discover it.
+
+### Local marketplace installs differ by CLI
+
+Copilot CLI 1.0.88 loads a local marketplace plugin live from its source directory without copying. Codex 0.158.0 installs `name@marketplace` into `~/.codex/plugins/cache/<marketplace>/<name>/<version>`, a separate installed copy.
+
+### Read CLI help before scripting
+
+`copilot agent list` does not exist; `copilot --help` exposes `--agent`, `--plugin-dir`, and `skill list`. Codex was absent from `PATH`, but `npx @openai/codex` ran 0.158.0. Copilot rejects classic `ghp_` tokens in `GITHUB_TOKEN`.
+
 ### Artifact previews prove only what they render
 
 Rendered previews are layout evidence, not proof that every packaged object exists. Inspect package internals when preview tools omit supported embedded images, drawings, media, or document parts.

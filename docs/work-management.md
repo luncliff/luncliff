@@ -20,7 +20,7 @@ When the user asks for investigation, return verified facts, open choices, and p
 
 ### Maintain a live constraint ledger
 
-For artifacts refined across turns, carry forward every accepted format, content, and language constraint. A later refinement changes only the named constraint unless it explicitly replaces earlier requirements.
+For artifacts refined across turns, carry forward every accepted format, content, scope, and language constraint. After deduplication was requested, copying 12 skills into a plugin with a parity check restored the rejected duplication. Test each later design against the ledger; a refinement changes only its named constraint.
 
 ### State verification before done
 
@@ -53,3 +53,19 @@ When one correction is complete but the intended follow-up remains blocked, repo
 ### Update retrospective notes by merging
 
 Before creating a new retrospective artifact, read the relevant purpose files, merge overlapping lessons, and rewrite them as the current best version. This keeps accumulated guidance compact enough to review and continue maintaining.
+
+### Restate the goal before restructuring
+
+An unrequested maintenance skill was added, and APM workspace setup was treated as plugin scope, requiring two `/align-again` corrections. Before structural edits, restate the goal, included artifacts, and exclusions, then check every planned file against them.
+
+### Evaluate challenges against the goal
+
+When the user challenged `plugins/`, the response defended format legality instead of checking the goal of one maintained source. Treat a challenge as a hypothesis: test it against the goal and evidence, then change or explain without reflexive agreement or defense.
+
+### Resolve recoverable blockers before reporting
+
+A main-profile cache error produced a partial report instead of an immediate isolated-profile retry. When an in-scope blocker has a local, reversible workaround, apply it and finish the stated verification before reporting.
+
+### Match the requested change size
+
+The README update was too verbose, and a `temp` ignore request produced a redundant `plugins/**/temp/` rule although `temp` already matched every depth. Check existing coverage first, then make the smallest edit that satisfies the request.
