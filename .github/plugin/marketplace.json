@@ -1,0 +1,14 @@
+{
+  "name": "luncliff-workspace",
+  "owner": {
+    "name": "luncliff"
+  },
+  "plugins": [
+    {
+      "name": "luncliff-workspace",
+      "description": "Maintain APM dependencies and verify agent configuration",
+      "version": "0.1.0",
+      "source": "./plugins/luncliff-workspace"
+    }
+  ]
+}

@@ -29,6 +29,18 @@ The manifest also installs the latest default-branch contents from
 `github/awesome-copilot`. Use `apm install --update` to refresh the resolved
 revision after the lockfile has been created.
 
+### CLI Plugin
+
+Install the workspace maintenance plugin in Copilot CLI:
+
+```powershell
+copilot plugin marketplace add .
+copilot plugin install luncliff-workspace@luncliff-workspace
+```
+
+In a trusted Codex CLI checkout, install `luncliff-workspace` via `/plugins`.
+Start a new session to use the `workspace-maintenance` skill.
+
 ### Lint
 
 Install the dependencies in [package.json](./package.json)

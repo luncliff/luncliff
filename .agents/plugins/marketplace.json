@@ -1,0 +1,20 @@
+{
+  "name": "luncliff-workspace",
+  "interface": {
+    "displayName": "luncliff workspace"
+  },
+  "plugins": [
+    {
+      "name": "luncliff-workspace",
+      "source": {
+        "source": "local",
+        "path": "./plugins/luncliff-workspace"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
