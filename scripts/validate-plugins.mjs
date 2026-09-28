@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { existsSync, readFileSync } from 'node:fs';
+import { readFileSync, readdirSync } from 'node:fs';
 import { resolve } from 'node:path';
 
 const readJson = (path) => JSON.parse(readFileSync(path, 'utf8'));
@@ -18,5 +18,12 @@ assert.equal(copilot.name, codex.name);
 
 const pluginRoot = resolve(copilot.plugins[0].source);
 assert.deepEqual(readJson(resolve(pluginRoot, 'plugin.json')), manifest);
-assert.ok(existsSync(resolve(pluginRoot, 'skills/workspace-maintenance/SKILL.md')));
+const packagedSkills = resolve(pluginRoot, 'skills');
+const skillDirectories = readdirSync(packagedSkills, { withFileTypes: true })
+	.filter((entry) => entry.isDirectory());
+assert.ok(skillDirectories.length > 0, 'Plugin must package at least one skill');
+for (const directory of skillDirectories) {
+	readFileSync(resolve(packagedSkills, directory.name, 'SKILL.md'));
+}
+readFileSync(resolve(pluginRoot, 'com.github.copilot/agents/review.agent.md'));
 console.log('CLI plugin catalogs valid');

@@ -1,7 +1,7 @@
 temp
 .vscode
 
-# only maintained skills will be tracked
+# Workspace skill installs are local; first-party plugin sources live under plugins/.
 .agents/skills
 .github/skills
 .claude/skills

@@ -6,8 +6,8 @@
   "plugins": [
     {
       "name": "luncliff-workspace",
-      "description": "Maintain APM dependencies and verify agent configuration",
-      "version": "0.1.0",
+      "description": "Install workspace skills and the Copilot review agent",
+      "version": "0.2.0",
       "source": "./plugins/luncliff-workspace"
     }
   ]

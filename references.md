@@ -26,7 +26,7 @@
 - [Copilot CLI plugin formats](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/about-cli-plugins): Agent Plugins 1.0 is the portable format; client-specific components have their own directory.
 - [Copilot CLI marketplace setup](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/plugins-marketplace): `.github/plugin/marketplace.json` registers repo plugin sources.
 - [Copilot CLI installation and inspection](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/plugins-finding-installing): register a marketplace, install a plugin, and list installations.
-- [Codex plugin packaging and repo marketplaces](https://developers.openai.com/plugins/build/plugins): `.agents/plugins/marketplace.json` exposes a local package; trusted-project `.codex/config.toml` controls enablement.
+- [Codex plugin packaging and repo marketplaces](https://developers.openai.com/plugins/build/plugins): `.agents/plugins/marketplace.json` exposes a local package that can be registered from a clone.
 - [APM targets matrix](https://microsoft.github.io/apm/reference/targets-matrix/): APM installs agent dependencies separately from CLI plugin installation.
 
 ### CI Examples

@@ -1,6 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "luncliff-workspace",
-  "version": "0.1.0",
-  "description": "Repository setup and maintenance workflows for the luncliff workspace"
+  "version": "0.2.0",
+  "description": "Shared agent skills and a Copilot review agent from the luncliff workspace"
 }

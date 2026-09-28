@@ -31,15 +31,16 @@ revision after the lockfile has been created.
 
 ### CLI Plugin
 
-Install the workspace maintenance plugin in Copilot CLI:
+APM configures this workspace only. Use Copilot CLI 1.0.88 or newer for the
+bundled review agent. To install the CLI plugin from a clone:
 
 ```powershell
 copilot plugin marketplace add .
 copilot plugin install luncliff-workspace@luncliff-workspace
 ```
 
-In a trusted Codex CLI checkout, install `luncliff-workspace` via `/plugins`.
-Start a new session to use the `workspace-maintenance` skill.
+For Codex CLI, run `codex plugin marketplace add .`, then install
+`luncliff-workspace` via `/plugins` and start a new session.
 
 ### Lint
 
