@@ -34,7 +34,7 @@ jobs:
         run: npm ci
 
       - name: Lint JSON
-        run: npm exec -- eslint .github/plugin/marketplace.json .agents/plugins/marketplace.json plugins/luncliff-workspace/plugin.json
+        run: npm exec -- eslint .github/plugin.json .github/plugin/marketplace.json .agents/plugins/marketplace.json
 
       - name: Lint Markdown
-        run: npm exec -- markdownlint-cli2 --no-globs "README.md" "references.md" "plugins/**/*.md"
+        run: npm exec -- markdownlint-cli2 --no-globs "README.md" "references.md" ".github/agents/**/*.md" ".github/com.github.copilot/**/*.md" ".github/skills/**/*.md"

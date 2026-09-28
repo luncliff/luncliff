@@ -1,9 +1,8 @@
 temp
 .vscode
 
-# Workspace skill installs are local; first-party plugin sources live under plugins/.
+# APM skill installs are local; first-party workspace skills live under .github/skills/.
 .agents/skills
-.github/skills
 .claude/skills
 
 # Created by https://www.gitignore.io/api/visualstudiocode

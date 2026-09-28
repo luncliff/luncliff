@@ -8,7 +8,7 @@
       "name": "luncliff-workspace",
       "source": {
         "source": "local",
-        "path": "./plugins/luncliff-workspace"
+        "path": "./.github"
       },
       "policy": {
         "installation": "AVAILABLE",

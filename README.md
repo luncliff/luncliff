@@ -32,7 +32,9 @@ revision after the lockfile has been created.
 ### CLI Plugin
 
 APM configures this workspace only. Use Copilot CLI 1.0.88 or newer for the
-bundled review agent. To install the CLI plugin from a clone:
+bundled review agent. The `.github` directory is both the VS Code customization
+root and the portable plugin root, so workspace and installed clients use the
+same skill sources. To install the CLI plugin from a clone:
 
 ```powershell
 copilot plugin marketplace add .

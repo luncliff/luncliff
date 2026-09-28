@@ -8,7 +8,7 @@
       "name": "luncliff-workspace",
       "description": "Install workspace skills and the Copilot review agent",
       "version": "0.2.0",
-      "source": "./plugins/luncliff-workspace"
+      "source": "./.github"
     }
   ]
 }
