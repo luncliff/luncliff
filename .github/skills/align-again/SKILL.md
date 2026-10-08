@@ -79,8 +79,7 @@ resolve it. Explain what the answer changes. Otherwise, ask nothing.
 Lead with the recovery outcome. Include only:
 
 - the specific failure and supporting evidence;
-- `Role: <one active role>`, followed by the restored objective, scope, and
-  exclusions; never combine roles;
+- explain the restored objective, scope, and exclusions.
 - assumptions, plans, or state now invalidated;
 - the correction taken or the immediate corrective action;
 - remaining uncertainty only when it changes the work;
