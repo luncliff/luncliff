@@ -60,8 +60,10 @@ guardrails, questions, and reports.
 ## Planning workflow
 
 Each step builds on the steps before it, and the plan presents the results in
-the same order, so a reader follows the reasoning from the session to the
-direction. Widen the evidence first, then narrow to decisions.
+the same order, so a reader follows the reasoning from the working contract to
+the direction. Establish the contract before broad research, resolve
+user-owned decisions after the relevant evidence is available, and confirm the
+assembled plan before execution.
 
 ### 1. Establish the governing basis
 
@@ -77,20 +79,44 @@ Gather the sources that shape the work:
 
 Record each binding direction with its source. Resolve conflicts by authority,
 then specificity, then recency, and carry each conflict that belongs to the
-user into the alignment step. This record is the spine of the plan: later
+user into steps 2 and 7. This record is the spine of the plan: later
 sections reuse its vocabulary and trace back to its entries.
 
 Classify each material claim:
 
 - **Fact:** supported by a cited source or an observed run.
 - **Inference:** a conclusion drawn from facts, with its reasoning.
-- **Assumption:** an open premise, paired with the check or decision that
-  settles it.
+- **Open premise:** a gap paired with the check or user decision that settles
+  it.
 
-### 2. Research beyond the current context
+### 2. Align the working contract
+
+Use the governing basis to reconstruct the active planning contract before
+widening the investigation:
+
+- the operating mode and requested deliverable;
+- the outcome, authorized scope, explicit exclusions, priority, and next
+  permitted action;
+- decisions already settled by the user or an authoritative source;
+- decisions intentionally deferred, dependent on evidence, answerable by the
+  agent, or owned by the user;
+- stale proposals and prior assistant conclusions that the current contract
+  supersedes.
+
+Preserve every unresolved point in its actual state. An assistant proposal,
+recommended default, compacted summary, or missing field remains distinct from
+a user decision. An unspecified edge behavior remains open or stays with the
+worker as an implementation choice; it does not become a plan requirement.
+Ask at this step only when a user-owned answer changes which evidence may be
+gathered or leaves every next planning action without a grounded direction.
+Otherwise record the open point and continue the investigation within the
+settled contract.
+
+### 3. Research beyond the current context
 
 Treat the session context as the starting point of the investigation, and
-expand it in rounds aimed at the decisions and assumptions still open:
+expand it within the working contract in rounds aimed at the decisions and
+open premises still unresolved:
 
 - Widen the sources: project records, upstream documentation and issue
   trackers, standards, published research, and prior art from comparable
@@ -103,13 +129,13 @@ expand it in rounds aimed at the decisions and assumptions still open:
 - Close each round with settled facts, sharper questions, or decisions, and
   start the next round from them.
 
-Return to research whenever a later step rests on an open assumption. Research
+Return to research whenever a later step rests on an open premise. Research
 reaches saturation when independent rounds across different source types leave
 the findings stable and each material competing hypothesis has been tested
 against source evidence. Cite each source beside the claim it supports, and
 move bulky evidence into a linked research record.
 
-### 3. Build the case for change
+### 4. Build the case for change
 
 From the evidence, establish the need for the work:
 
@@ -125,13 +151,13 @@ From the evidence, establish the need for the work:
 
 When purposes pull apart, split them and state which one yields.
 
-### 4. Define the target
+### 5. Define the target
 
 Derive the target from the needs:
 
 - objectives, each naming the observable change it delivers and citing its
   need IDs;
-- to-be decision views paired with the as-is views from step 3;
+- to-be decision views paired with the as-is views from step 4;
 - boundaries: the surfaces that stay as they are, and the place deferred work
   goes;
 - constraints that every approach honors, each tied to its source, including
@@ -141,7 +167,7 @@ Derive the target from the needs:
 
 Use the vocabulary of the source system and the repository for every name.
 
-### 5. Define done
+### 6. Define done
 
 Turn each objective into acceptance criteria. Each criterion states:
 
@@ -171,9 +197,31 @@ fresh-context reviewer or model judge applies, and treat the verdict as
 evidence for the acceptor. For broad work, define the inventory rule that
 enumerates every target and the coverage invariant: a target counts as covered
 when every applicable criterion passes for it. Name the success condition, the
-exit condition, and the acceptor.
+exit condition, and the acceptor. Every criterion traces to a sourced need;
+implementation choices and unspecified behavior stay outside the acceptance
+contract until evidence or a user decision adds them.
 
-### 6. Choose the direction
+### 7. Resolve user-owned decisions
+
+Settle agent-resolvable facts through investigation, then bring the user only
+the value, priority, authorization, edge-case, and hard-to-reverse decisions
+that remain and can change the target, done conditions, direction, or phases.
+For each decision, present its context, source evidence, comparable
+alternatives, effect on the plan, and a recommendation tied to the criterion it
+optimizes. The user owns the choice unless they explicitly delegated it.
+
+Obtain facts from their source or a safe check rather than asking the user to
+supply them. When the source is unavailable in the current planning run, record
+the evidence gap and its investigation as a prerequisite; ask the user only if
+a value choice still remains after that fact is known.
+
+Ask the smallest prioritized round whose prerequisites are settled. Keep an
+unanswered choice open and mark every dependent conclusion as contingent; a
+recommended answer is not confirmation. Fold each answer back into the
+earliest affected step, recompute the downstream sections, and preserve the
+source of the decision.
+
+### 8. Choose the direction
 
 Generate candidate directions widely, starting from incremental change,
 structural redesign toward the long-term state, adoption of an existing library
@@ -182,21 +230,25 @@ evidence suggests. Give each candidate its to-be view, and compare the
 candidates at equal depth on benefit per need, cost, risk, reversibility, and
 evidence.
 
-Select the simplest direction that fully meets the needs for the long term,
-and record:
+Select the simplest direction that fully meets the needs for the long term
+when its user-owned decisions are settled or explicitly delegated. Otherwise,
+compare the viable directions, state the decision each depends on, and keep the
+selection contingent. Record:
 
 - the key decisions with their reasons, alternatives, and accepted costs;
 - watch conditions: run a pre-mortem in your reasoning by imagining the work
   has ended in a setback and listing the most plausible causes, then record
   each cause as an observable signal, its threshold, and the response, such
   as a check, an experiment, or an early phase;
-- the experiment that retires the largest open assumption, scheduled first,
+- the experiment that retires the largest open premise, scheduled first,
   with the results that keep or change the direction.
 
-State the conclusion as one task direction in a few sentences. The approach to
-each objective stays with the workers.
+State the settled conclusion as one task direction in a few sentences. When a
+user-owned choice remains open, state the contingent branches and the decision
+that selects between them. The approach to each objective stays with the
+workers.
 
-### 7. Phase the work
+### 9. Phase the work
 
 Group the objectives into the fewest ordered phases that each leave the system
 coherent and verifiable on its own. Order them by dependency and risk, then by
@@ -210,19 +262,20 @@ a stated priority criterion. Give each phase:
 - **Lanes:** parallel slices with their ownership boundaries, shared
   interfaces, and integration check.
 
-### 8. Align with the user
+### 10. Confirm the plan
 
-Settle facts through investigation. Bring the user the decisions that the
-sources leave open and that change the plan: intent, edge cases, trade-offs,
-priorities, and hard-to-reverse steps. Ask in rounds: every open question whose
-prerequisites are settled, each with its context, a recommended answer,
-alternatives at comparable depth, and the effect of each answer. Fold each
-answer into the plan: recompute the affected target, criteria, direction, and
-phases, recompute the open questions, and rerun the quality gate. Record an
-explicit assumption for each point the plan tolerates either way, and mark a
-direction that rests on an open decision as contingent on it. Alignment holds
-when the user confirms that the plan states their intent; in an autonomous
-session, the recommended answers stand as visible assumptions.
+Re-read the assembled plan against the working contract and every recorded
+user decision. Recompute its trace, open decisions, direction status, and
+phases, then run the quality gate. Present a compact alignment snapshot with
+the plan: objective, scope, exclusions, settled decisions, contingent points,
+and next permitted action.
+
+Request confirmation when the completed plan contains a new or changed
+user-owned decision, or when execution would begin a hard-to-reverse step. An
+existing explicit execution request is sufficient when the final plan stays
+inside its confirmed contract and no user-owned decision remains. This final
+confirmation verifies the complete plan; it does not replace the working
+contract in step 2 or the decision gate in step 7.
 
 ## Plan output
 
